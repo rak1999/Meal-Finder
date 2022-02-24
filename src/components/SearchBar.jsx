@@ -32,7 +32,7 @@ export default function SearchBar(){
     // }, [result]);
     
     return (
-        <div className="main">
+        <div >
             <div className="search">
                 <input className="input" type="text" 
                 placeholder="Search for a meals or keywords" 
@@ -42,11 +42,15 @@ export default function SearchBar(){
                 }}/> 
                 <button onClick={fet()}>
                     <FaSistrix/>
-                    </button>
+                </button>
                 <button><FaRandom/></button>
             </div>
-            <div className="display">
-                {result && result.map((ele,index)=><Image key={index} ele={ele}/> )}
+            <div className="imageList">
+                {result && result.map((ele,index)=>
+                <div className="display">
+                 <Image key={index} ele={ele}/>
+                </div>
+                 )}
             </div>
         </div>
         

@@ -5,9 +5,14 @@
 }
 
 .img{
-    flex : 1 0 21% ;
-    margin-top: 1%;
+    flex : 1 0 25%;
     margin: 5px;
     width: 400px;
     height: 400px;
+}
+.view-btn{
+    color: #fff700;
+    text-decoration: none;
+    font-size: 20px;
+    justify-content: center;
 }
