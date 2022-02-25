@@ -3,6 +3,6 @@ import "./header.css"
 
 export default function Header(){
     return (
-        <h1> Meal Finder  </h1>
+        <h1 className="heading"> Meal Finder  </h1>
     )
 }

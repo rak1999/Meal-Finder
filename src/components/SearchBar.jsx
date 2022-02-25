@@ -39,11 +39,12 @@ export default function SearchBar(){
                 value={value} 
                 onChange={(e)=>{
                     setValue((e.target.value));
-                }}/> 
-                <button onClick={fet()}>
+                }}
+                /> 
+                <button onClick={fet}  >
                     <FaSistrix/>
                 </button>
-                <button><FaRandom/></button>
+                <button ><FaRandom/></button>
             </div>
             <div className="imageList">
                 {result && result.map((ele,index)=>
