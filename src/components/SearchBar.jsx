@@ -6,7 +6,6 @@ import "./searchBar.css";
 export default function SearchBar(){
       const [value , setValue]=useState("");
       const [result,setResult]=useState(null);
-      const [loading , setLoading] = useState();
       function fet(){
         if(!value)return;
         async function fetchdata(){
@@ -15,21 +14,8 @@ export default function SearchBar(){
           const requireddata= data.meals;
           setResult(requireddata);
         }
-        if(!fetchdata){
-           return setLoading("loading.....");
-        }
         fetchdata();
       }
-      
-    // const [value , setValue] = useState("")
-    // const [result ,setResult] = useState();
-    // useEffect(() => {
-    //     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${value}`)
-    //       .then((res) => res.json())
-    //       .then((response) => {
-    //           setValue(response);
-    //       });
-    // }, [result]);
     
     return (
         <div >
@@ -44,7 +30,6 @@ export default function SearchBar(){
                 <button onClick={fet}  >
                     <FaSistrix/>
                 </button>
-                <button ><FaRandom/></button>
             </div>
             <div className="imageList">
                 {result && result.map((ele,index)=>
